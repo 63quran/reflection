@@ -3,6 +3,7 @@ import com.sun.org.apache.xpath.internal.SourceTree;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.util.Iterator;
 
 //测试反射获取类信息
 public class Test03 {
@@ -57,6 +58,19 @@ public class Test03 {
         Constructor declaredConstructor = user.getDeclaredConstructor(String.class, int.class, int.class);
         System.out.println(declaredConstructor);
 
+
+    }
+
+    public String generateStr(String str) {
+
+        //卫语句
+        if (str.equals("a")) {
+            return "a";
+        }
+        if (str.equals("b")) {
+            return "b";
+        }
+        return "c";
 
     }
 }
